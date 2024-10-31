@@ -1,3 +1,4 @@
+import Home from './components/Home';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -8,15 +9,9 @@ function App() {
         <Navbar />
       </div>
 
-      <div className="relative text-white">
-        <div className="min-h-screen flex justify-between home">
-          <div className="flex items-center justify-center w-full">
-            <h1 className="">Hello My name is Anand P</h1>
-          </div>
-          <div className="flex items-center justify-center w-full">
-            <h1>Web developer</h1>
-          </div>
-        </div>
+      <div id="home" className="relative text-white">
+        <Home />
+
         <h1 className="m-5 p-10 text-3xl">Hello</h1>
         <h1 className="m-5 p-10 text-3xl">Hello</h1>
         <h1 className="m-5 p-10 text-3xl">Hello</h1>

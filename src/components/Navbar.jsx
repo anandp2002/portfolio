@@ -4,20 +4,26 @@ import { Link } from 'react-scroll';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('home');
+  const [selected, setSelected] = useState('');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full backdrop-blur-lg shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full backdrop-blur-lg shadow-xl z-50">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex text-white items-center">
-            <img className="h-8 w-8 rounded-full" src="dp.webp" />
-            <h1 className="font-bold ml-3">Anand P</h1>
-          </div>
+        <div
+          className={`flex justify-between items-center py-4 ${
+            !isOpen ? 'shadow-xl' : ''
+          }`}
+        >
+          <Link to="home">
+            <div className="flex text-white items-center cursor-pointer">
+              <img className="h-7 w-7 rounded-full" src="dp.gif" />
+              <h1 className="font-bold ml-2 text-xl">AP</h1>
+            </div>
+          </Link>
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8 text-white font-bold">
