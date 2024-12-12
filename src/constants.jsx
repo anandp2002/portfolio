@@ -61,3 +61,72 @@ export const PROJECTS = [
     githubLink: 'https://github.com/anandp2002/weather_app',
   },
 ];
+
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNode,
+  FaGitAlt,
+  FaGithub,
+} from 'react-icons/fa';
+import { SiMysql, SiTailwindcss, SiRedux } from 'react-icons/si'; // Import icons for MySQL, Tailwind CSS, and Redux
+import { DiPython } from 'react-icons/di';
+
+export const SKILLS = [
+  {
+    icon: <FaHtml5 className="text-orange-500 text-4xl" />,
+    name: 'HTML 5',
+  },
+  {
+    icon: <FaCss3Alt className="text-blue-500 text-4xl" />,
+    name: 'CSS',
+  },
+  {
+    icon: <FaJsSquare className="text-yellow-500 text-4xl" />,
+    name: 'JavaScript',
+  },
+  {
+    icon: <FaReact className="text-cyan-400 text-4xl" />,
+    name: 'React JS',
+  },
+  {
+    icon: <FaNode className="text-green-500 text-4xl" />,
+    name: 'Node JS',
+  },
+  {
+    icon: <FaGitAlt className="text-red-500 text-4xl" />,
+    name: 'Git',
+  },
+  {
+    icon: <FaGithub className="text-white text-4xl" />,
+    name: 'GitHub',
+  },
+  {
+    icon: <SiMysql className="text-blue-700 text-4xl" />,
+    name: 'MySQL',
+  },
+  {
+    icon: <SiTailwindcss className="text-sky-500 text-4xl" />,
+    name: 'Tailwind CSS',
+  },
+  {
+    icon: <SiRedux className="text-purple-600 text-4xl" />,
+    name: 'Redux Toolkit',
+  },
+  {
+    icon: <DiPython className="text-yellow-500 text-4xl" />, // Python icon
+    name: 'Python',
+  },
+  {
+    icon: (
+      <img
+        src="c.png"
+        alt="C Language Icon"
+        className="text-green-500 h-[36px]"
+      />
+    ),
+    name: 'C',
+  },
+];

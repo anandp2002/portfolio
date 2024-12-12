@@ -1,6 +1,7 @@
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div id="home" className="relative text-white">
         <Home />
         <Projects />
+        <Skills />
 
         <h1 className="m-5 p-10 text-3xl">Hello</h1>
         <h1 className="m-5 p-10 text-3xl">Hello</h1>

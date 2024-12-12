@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants.jsx';
 import { FaGithub } from 'react-icons/fa'; // GitHub icon
 import { FiExternalLink } from 'react-icons/fi'; // Live Demo icon
 
@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <section
-      className="pt-16 max-w-7xl mx-auto"
+      className="pt-24 max-w-7xl mx-auto"
       id="projects"
       ref={projectsRef}
     >
