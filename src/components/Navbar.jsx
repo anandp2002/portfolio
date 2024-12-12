@@ -11,15 +11,15 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full backdrop-blur-lg shadow-xl z-50">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 w-full backdrop-blur-3xl shadow-xl z-50 ">
+      <div className="max-w-7xl mx-auto px-5">
         <div
           className={`flex justify-between items-center py-4 ${
             !isOpen ? 'shadow-xl' : ''
           }`}
         >
           <Link to="home">
-            <div className="flex text-white items-center cursor-pointer">
+            <div className="flex text-white items-center cursor-pointer ">
               <img className="h-7 w-7 rounded-full" src="dp.gif" />
               <h1 className="font-bold ml-2 text-xl">AP</h1>
             </div>
@@ -44,22 +44,6 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              onClick={() => {
-                toggleMenu();
-                setSelected('about');
-              }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'about'
-                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
-                  : ''
-              }`}
-            >
-              About
-            </Link>
-            <Link
               to="projects"
               smooth={true}
               duration={500}
@@ -74,6 +58,22 @@ function Navbar() {
               }`}
             >
               Projects
+            </Link>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                toggleMenu();
+                setSelected('skills');
+              }}
+              className={`cursor-pointer px-2 py-1 ${
+                selected === 'skills'
+                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
+                  : ''
+              }`}
+            >
+              Skills
             </Link>
             <Link
               to="contact"
@@ -139,71 +139,24 @@ function Navbar() {
 
       {/* Mobile menu dropdown */}
       {isOpen && (
-        <div className="md:hidden text-white flex font-bold text-md items-center justify-center pb-4 shadow-xl">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              toggleMenu();
-              setSelected('home');
-            }}
-            className={`block px-4 py-1 cursor-pointer ${
-              selected === 'home'
-                ? ' bg-gray-100 rounded-lg text-[#1a0218]'
-                : ''
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              toggleMenu();
-              setSelected('about');
-            }}
-            className={`block px-4 py-1 cursor-pointer ${
-              selected === 'about'
-                ? ' bg-gray-100 rounded-lg text-[#1a0218]'
-                : ''
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              toggleMenu();
-              setSelected('projects');
-            }}
-            className={`block px-4 py-1 cursor-pointer ${
-              selected === 'projects'
-                ? ' bg-gray-100 rounded-lg text-[#1a0218]'
-                : ''
-            }`}
-          >
-            Projects
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              toggleMenu();
-              setSelected('contact');
-            }}
-            className={`block px-4 py-1 cursor-pointer ${
-              selected === 'contact'
-                ? ' bg-gray-100 rounded-lg text-[#1a0218]'
-                : ''
-            }`}
-          >
-            Contact
-          </Link>
+        <div className="md:hidden text-white flex flex-col min-h-screen -mt-14 font-bold text-2xl gap-y-4 items-center justify-center mb-20">
+          {['home', 'projects', 'skills', 'contact'].map((item) => (
+            <Link
+              key={item}
+              to={item}
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                toggleMenu();
+                setSelected(item);
+              }}
+              className={`block px-4 py-1 cursor-pointer ${
+                selected === item ? 'text-white' : ''
+              }`}
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </Link>
+          ))}
         </div>
       )}
     </nav>
