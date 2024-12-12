@@ -1,3 +1,4 @@
+import ContactMe from './components/ContactMe';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -15,24 +16,7 @@ function App() {
         <Home />
         <Projects />
         <Skills />
-
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 id="about" className="m-5 p-10 text-3xl">
-          Hello
-        </h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
-        <h1 className="m-5 p-10 text-3xl">Hello</h1>
+        <ContactMe />
       </div>
     </main>
   );

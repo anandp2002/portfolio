@@ -11,7 +11,7 @@ const Skills = () => {
       ref={skillsRef}
     >
       <div className="px-4">
-        <h2 className="mb-8 text-center text-3xl font-medium lg:text-4xl">
+        <h2 className="mb-6 text-center text-3xl font-medium lg:text-4xl">
           SKILLS
         </h2>
         <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">

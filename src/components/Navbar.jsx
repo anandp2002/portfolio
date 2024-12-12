@@ -89,7 +89,7 @@ function Navbar() {
                   : ''
               }`}
             >
-              Contact
+              Contact Me
             </Link>
           </div>
 
