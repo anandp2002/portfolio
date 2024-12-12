@@ -79,7 +79,10 @@ const ContactMe = () => {
 
       {/* Right side */}
       <div className="w-full lg:w-1/2 h-[593px] hidden lg:block">
-        <img src="c4.jpg" className="h-full w-full object-cover rounded-r-lg" />
+        <img
+          src="contactme.jpg"
+          className="h-full w-full object-cover rounded-r-lg"
+        />
       </div>
     </div>
   );
