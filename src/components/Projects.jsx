@@ -28,7 +28,11 @@ const Projects = () => {
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <div className="flex-grow overflow-hidden rounded-lg border border-purple-300/20">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.link != '' ? project.link : project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <motion.img
                   src={project.imgSrc}
                   alt={project.title}
