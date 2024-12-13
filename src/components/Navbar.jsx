@@ -76,6 +76,22 @@ function Navbar() {
               Skills
             </Link>
             <Link
+              to="education"
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                toggleMenu();
+                setSelected('education');
+              }}
+              className={`cursor-pointer px-2 py-1 ${
+                selected === 'education'
+                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
+                  : ''
+              }`}
+            >
+              Education
+            </Link>
+            <Link
               to="contact"
               smooth={true}
               duration={500}
@@ -140,23 +156,25 @@ function Navbar() {
       {/* Mobile menu dropdown */}
       {isOpen && (
         <div className="md:hidden text-white flex flex-col min-h-screen -mt-14 font-bold text-2xl gap-y-4 items-center justify-center mb-20">
-          {['home', 'projects', 'skills', 'contact'].map((item) => (
-            <Link
-              key={item}
-              to={item}
-              smooth={true}
-              duration={500}
-              onClick={() => {
-                toggleMenu();
-                setSelected(item);
-              }}
-              className={`block px-4 py-1 cursor-pointer ${
-                selected === item ? 'text-white' : ''
-              }`}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </Link>
-          ))}
+          {['home', 'projects', 'skills', 'education', 'contact'].map(
+            (item) => (
+              <Link
+                key={item}
+                to={item}
+                smooth={true}
+                duration={500}
+                onClick={() => {
+                  toggleMenu();
+                  setSelected(item);
+                }}
+                className={`block px-4 py-1 cursor-pointer ${
+                  selected === item ? 'text-white' : ''
+                }`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+            )
+          )}
         </div>
       )}
     </nav>

@@ -1,4 +1,6 @@
 import ContactMe from './components/ContactMe';
+import Education from './components/Education';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -16,7 +18,9 @@ function App() {
         <Home />
         <Projects />
         <Skills />
+        <Education />
         <ContactMe />
+        <Footer />
       </div>
     </main>
   );

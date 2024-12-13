@@ -130,3 +130,31 @@ export const SKILLS = [
     name: 'C',
   },
 ];
+
+export const EDUCATION = [
+  {
+    id: 1,
+    degree:
+      'Bachelor of Technology in Computer Science and Engineering ( 2020 - 2024 )',
+    board: 'APJ Abdul Kalam Technological University',
+
+    institute: 'College Of Engineering Thalassery',
+    mark: '8.26 CGPA',
+  },
+  {
+    id: 2,
+    degree: 'Plus Two ( 2018 - 2020 )',
+    board: 'Board Of Higher Secondary Examinations, Kerala',
+
+    institute: "St. Sebastian's Higher Secondary School Velimanam",
+    mark: '96 %',
+  },
+  {
+    id: 3,
+    degree: 'SSLC ( 2017 - 2018 )',
+    board: 'Board Of Public Examinations, Kerala',
+
+    institute: "St. Sebastian's UP School Veerpad",
+    mark: '100 %',
+  },
+];

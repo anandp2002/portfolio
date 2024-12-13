@@ -72,7 +72,7 @@ const ContactMe = () => {
           <input
             type="submit"
             value="Send"
-            className="w-[100px] p-3 bg-[#190417] text-white font-semibold rounded-md hover:bg-[#43213f] transition ease-in-out duration-200 cursor-pointer"
+            className="w-[100px] p-3 bg-[#3f1e3c] text-white font-semibold rounded-md hover:bg-[#2d152a] transition ease-in-out duration-200 cursor-pointer"
           />
         </form>
       </div>
