@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
@@ -9,8 +9,10 @@ const ContactMe = () => {
   const EMAILJS_PUBLIC_KEY = 'wgL8-ExK_02SaZx7h';
 
   const form = useRef();
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
+    setIsSending(true);
     e.preventDefault();
 
     emailjs
@@ -19,9 +21,12 @@ const ContactMe = () => {
       })
       .then(
         () => {
+          setIsSending(false);
           toast.success('Email sent successfully !');
+          form.current.reset(); // Clear the form after sending
         },
         (error) => {
+          setIsSending(false);
           toast.error(`Error : ${error.text}`);
         }
       );
@@ -76,11 +81,12 @@ const ContactMe = () => {
             required
           />
 
-          <input
+          <button
             type="submit"
-            value="Send"
             className="w-[100px] p-3 bg-[#3f1e3c] text-white font-semibold rounded-md hover:bg-[#2d152a] transition ease-in-out duration-200 cursor-pointer"
-          />
+          >
+            {isSending ? 'Sending...' : 'Send'}
+          </button>
         </form>
       </motion.div>
 

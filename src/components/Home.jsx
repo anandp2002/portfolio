@@ -19,8 +19,8 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h1 className="text-4xl sm:text-6xl font-extrabold">ANAND P</h1>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-violet-100 pt-2">
-            Fullstack Web Developer
+          <h2 className="text-2xl sm:text-3xl font-semibold text-violet-200 pt-2">
+            Full-stack Web Developer
           </h2>
           <p className="mt-4 text-xl text-justify font-extralight max-w-5xl">
             A 2024 B.Tech CSE graduate with a strong foundation in frontend
