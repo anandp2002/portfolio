@@ -18,7 +18,7 @@ function Navbar() {
             !isOpen ? 'shadow-xl' : ''
           }`}
         >
-          <Link to="home">
+          <Link to="home" smooth={true} duration={500}>
             <div className="flex text-white items-center cursor-pointer ">
               <img className="h-7 w-7 rounded-full" src="dp.gif" />
               <h1 className="font-bold ml-2 text-xl">AP</h1>
