@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full backdrop-blur-3xl shadow-xl z-50 ">
+    <nav className="fixed top-0 left-0 w-full bg-[#190417] shadow-xl z-50 ">
       <div className="max-w-7xl mx-auto px-5">
         <div
           className={`flex justify-between items-center py-4 ${

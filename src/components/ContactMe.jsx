@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
 const ContactMe = () => {
   const EMAILJS_SERVICE_ID = 'service_fxlxjgh';
@@ -33,8 +34,14 @@ const ContactMe = () => {
     >
       <Toaster />
 
-      {/* Left side */}
-      <div className="w-full lg:w-1/2 h-[593px]">
+      {/* Left side: Form with animation */}
+      <motion.div
+        className="w-full lg:w-1/2 h-[593px]"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8 }}
+      >
         <form
           className="bg-gray-100 py-4 px-6 rounded-lg lg:rounded-none lg:rounded-l-lg shadow-md max-w-2xl mx-auto space-y-6 h-full"
           ref={form}
@@ -75,15 +82,21 @@ const ContactMe = () => {
             className="w-[100px] p-3 bg-[#3f1e3c] text-white font-semibold rounded-md hover:bg-[#2d152a] transition ease-in-out duration-200 cursor-pointer"
           />
         </form>
-      </div>
+      </motion.div>
 
-      {/* Right side */}
-      <div className="w-full lg:w-1/2 h-[593px] hidden lg:block">
+      {/* Right side: Image with animation */}
+      <motion.div
+        className="w-full lg:w-1/2 h-[593px] hidden lg:block"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8 }}
+      >
         <img
           src="contactme.jpg"
           className="h-full w-full object-cover rounded-r-lg"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

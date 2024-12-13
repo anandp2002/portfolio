@@ -1,12 +1,23 @@
 import { Linkedin, Github, File } from 'lucide-react';
 import ProfileImage from '../assets/profile.png';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div className="sm:min-h-screen flex justify-center items-center text-white pt-20 sm:pt-0 max-w-7xl mx-auto ">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5 gap-8">
+    <div className="sm:min-h-screen flex justify-center items-center text-white pt-20 sm:pt-0 max-w-7xl mx-auto">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 items-center px-5 gap-8"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         {/* Left Section */}
-        <div className="flex flex-col justify-center">
+        <motion.div
+          className="flex flex-col justify-center"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
           <h1 className="text-4xl sm:text-6xl font-extrabold">ANAND P</h1>
           <h2 className="text-2xl sm:text-3xl font-semibold text-violet-100 pt-2">
             Fullstack Web Developer
@@ -19,7 +30,12 @@ const Home = () => {
             consistently approaching the user experience from a mobile-first
             perspective.
           </p>
-          <div className="flex items-center pt-5 space-x-4">
+          <motion.div
+            className="flex items-center pt-5 space-x-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
             <a
               href="https://www.linkedin.com/in/anand-p-18894a219/"
               target="_blank"
@@ -44,18 +60,23 @@ const Home = () => {
                 <button className="font-semibold">Resume</button>
               </div>
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Section */}
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <img
             src={ProfileImage}
             alt="Anand P"
             className="object-cover rounded-lg shadow-lg"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
