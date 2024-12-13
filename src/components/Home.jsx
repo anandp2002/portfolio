@@ -3,7 +3,7 @@ import ProfileImage from '../assets/profile.png';
 
 const Home = () => {
   return (
-    <div className="sm:min-h-screen flex justify-center items-center text-white pt-20 sm:pt-0 max-w-7xl mx-auto">
+    <div className="sm:min-h-screen flex justify-center items-center text-white pt-20 sm:pt-0 max-w-7xl mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5 gap-8">
         {/* Left Section */}
         <div className="flex flex-col justify-center">

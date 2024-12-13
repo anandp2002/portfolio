@@ -40,7 +40,7 @@ const ContactMe = () => {
           ref={form}
           onSubmit={sendEmail}
         >
-          <h2 className="mb-6 text-start text-3xl font-medium lg:text-4xl text-[#190417] ">
+          <h2 className="mb-6 text-center sm:text-right text-3xl font-medium lg:text-4xl text-[#190417] ">
             CONTACT ME
           </h2>
           <label className="block text-[#190417] font-semibold">Name</label>
