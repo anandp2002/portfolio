@@ -25,7 +25,16 @@ const Skills = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
           >
-            <div className="mb-4">{skill.icon}</div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                delay: 0.1,
+                duration: 0.2,
+              }}
+              className="mb-4"
+            >
+              {skill.icon}
+            </motion.div>
             <h3 className="mb-2 text-lg font-medium lg:text-xl">
               {skill.name}
             </h3>
