@@ -1,3 +1,6 @@
+export const RESUME_DRIVE_LINK =
+  'https://drive.google.com/file/d/1pvBxZgHZYP5SvpMh6w7Q_MSt6qXcqOer/view?usp=sharing';
+
 export const PROJECTS = [
   {
     id: 1,

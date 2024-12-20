@@ -1,6 +1,7 @@
 import { Linkedin, Github, File } from 'lucide-react';
 import ProfileImage from '../assets/profile.png';
 import { motion } from 'framer-motion';
+import { RESUME_DRIVE_LINK } from '../constants';
 
 const Home = () => {
   return (
@@ -51,7 +52,7 @@ const Home = () => {
               <Github size={28} className="hover:text-gray-300" />
             </a>
             <a
-              href="https://drive.google.com/file/d/18mbAKhc7angmp4Goo9LKIxFMZTETqw7S/view?usp=sharing"
+              href={RESUME_DRIVE_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >
