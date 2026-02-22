@@ -14,9 +14,8 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-[#190417] shadow-xl z-50 ">
       <div className="max-w-7xl mx-auto px-5">
         <div
-          className={`flex justify-between items-center py-4 ${
-            !isOpen ? 'shadow-xl' : ''
-          }`}
+          className={`flex justify-between items-center py-4 ${!isOpen ? 'shadow-xl' : ''
+            }`}
         >
           <Link to="home" smooth={true} duration={500}>
             <div className="flex text-white items-center cursor-pointer ">
@@ -35,11 +34,10 @@ function Navbar() {
                 toggleMenu();
                 setSelected('home');
               }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'home'
+              className={`cursor-pointer px-2 py-1 ${selected === 'home'
                   ? 'bg-gray-100 rounded-lg text-[#1a0218]'
                   : ''
-              }`}
+                }`}
             >
               Home
             </Link>
@@ -51,11 +49,10 @@ function Navbar() {
                 toggleMenu();
                 setSelected('projects');
               }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'projects'
+              className={`cursor-pointer px-2 py-1 ${selected === 'projects'
                   ? 'bg-gray-100 rounded-lg text-[#1a0218]'
                   : ''
-              }`}
+                }`}
             >
               Projects
             </Link>
@@ -67,13 +64,27 @@ function Navbar() {
                 toggleMenu();
                 setSelected('skills');
               }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'skills'
+              className={`cursor-pointer px-2 py-1 ${selected === 'skills'
                   ? 'bg-gray-100 rounded-lg text-[#1a0218]'
                   : ''
-              }`}
+                }`}
             >
               Skills
+            </Link>
+            <Link
+              to="experience"
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                toggleMenu();
+                setSelected('experience');
+              }}
+              className={`cursor-pointer px-2 py-1 ${selected === 'experience'
+                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
+                  : ''
+                }`}
+            >
+              Experience
             </Link>
             <Link
               to="education"
@@ -83,11 +94,10 @@ function Navbar() {
                 toggleMenu();
                 setSelected('education');
               }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'education'
+              className={`cursor-pointer px-2 py-1 ${selected === 'education'
                   ? 'bg-gray-100 rounded-lg text-[#1a0218]'
                   : ''
-              }`}
+                }`}
             >
               Education
             </Link>
@@ -99,11 +109,10 @@ function Navbar() {
                 toggleMenu();
                 setSelected('contact');
               }}
-              className={`cursor-pointer px-2 py-1 ${
-                selected === 'contact'
+              className={`cursor-pointer px-2 py-1 ${selected === 'contact'
                   ? 'bg-gray-100 rounded-lg text-[#1a0218]'
                   : ''
-              }`}
+                }`}
             >
               Contact Me
             </Link>
@@ -156,7 +165,7 @@ function Navbar() {
       {/* Mobile menu dropdown */}
       {isOpen && (
         <div className="md:hidden text-white flex flex-col min-h-screen -mt-14 font-bold text-2xl gap-y-4 items-center justify-center mb-20">
-          {['home', 'projects', 'skills', 'education', 'contact'].map(
+          {['home', 'projects', 'skills', 'experience', 'education', 'contact'].map(
             (item) => (
               <Link
                 key={item}
@@ -167,9 +176,8 @@ function Navbar() {
                   toggleMenu();
                   setSelected(item);
                 }}
-                className={`block px-4 py-1 cursor-pointer ${
-                  selected === item ? 'text-white' : ''
-                }`}
+                className={`block px-4 py-1 cursor-pointer ${selected === item ? 'text-white' : ''
+                  }`}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </Link>

@@ -161,3 +161,18 @@ export const EDUCATION = [
     mark: '100 %',
   },
 ];
+
+export const EXPERIENCE = [
+  {
+    id: 1,
+    role: 'Junior Programmer',
+    company: 'Thoughtplex India Private Limited',
+    duration: 'Apr 2025 - Present',
+    points: [
+      'Developing and maintaining a full-stack application built with Node JS, React JS, Tailwind CSS, and Firebase — crafting responsive front-end interfaces and scalable backend services.',
+      'Built real-time video calling with WebRTC, designed RESTful APIs, and automated backend workflows using Node JS cron jobs.',
+      'Integrated Stripe and GoCardless for end-to-end subscription management and payment processing.',
+      'Handled multi-environment backend deployments with systemd, HAProxy, TLS certificates, and Linux server administration.',
+    ],
+  },
+];
