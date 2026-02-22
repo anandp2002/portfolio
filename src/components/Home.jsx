@@ -1,5 +1,4 @@
 import { Linkedin, Github, File } from 'lucide-react';
-import ProfileImage from '../assets/profile.png';
 import { motion } from 'framer-motion';
 import { RESUME_DRIVE_LINK } from '../constants';
 
@@ -7,7 +6,7 @@ const Home = () => {
   return (
     <div className="sm:min-h-screen flex justify-center items-center text-white pt-20 sm:pt-0 max-w-7xl mx-auto">
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 items-center px-5 gap-8"
+        className="px-5"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -63,23 +62,10 @@ const Home = () => {
             </a>
           </motion.div>
         </motion.div>
-
-        {/* Right Section */}
-        <motion.div
-          className="flex justify-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <img
-            src={ProfileImage}
-            alt="Anand P"
-            className="object-cover rounded-lg shadow-lg"
-          />
-        </motion.div>
       </motion.div>
     </div>
   );
 };
 
 export default Home;
+
