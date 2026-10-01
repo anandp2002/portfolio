@@ -42,6 +42,21 @@ function Navbar() {
               Home
             </Link>
             <Link
+              to="experience"
+              smooth={true}
+              duration={500}
+              onClick={() => {
+                toggleMenu();
+                setSelected('experience');
+              }}
+              className={`cursor-pointer px-2 py-1 ${selected === 'experience'
+                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
+                  : ''
+                }`}
+            >
+              Experience
+            </Link>
+            <Link
               to="projects"
               smooth={true}
               duration={500}
@@ -70,21 +85,6 @@ function Navbar() {
                 }`}
             >
               Skills
-            </Link>
-            <Link
-              to="experience"
-              smooth={true}
-              duration={500}
-              onClick={() => {
-                toggleMenu();
-                setSelected('experience');
-              }}
-              className={`cursor-pointer px-2 py-1 ${selected === 'experience'
-                  ? 'bg-gray-100 rounded-lg text-[#1a0218]'
-                  : ''
-                }`}
-            >
-              Experience
             </Link>
             <Link
               to="education"
@@ -165,7 +165,7 @@ function Navbar() {
       {/* Mobile menu dropdown */}
       {isOpen && (
         <div className="md:hidden text-white flex flex-col min-h-screen -mt-14 font-bold text-2xl gap-y-4 items-center justify-center mb-20">
-          {['home', 'projects', 'skills', 'experience', 'education', 'contact'].map(
+          {['home', 'experience', 'projects', 'skills', 'education', 'contact'].map(
             (item) => (
               <Link
                 key={item}

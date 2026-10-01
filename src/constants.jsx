@@ -53,16 +53,6 @@ export const PROJECTS = [
     githubLink:
       'https://github.com/anandp2002/Image-denoising-using-Metaheuristic-Algorithm',
   },
-  {
-    id: 6,
-    title: 'Weather App',
-    description:
-      'Created a simple weather app that allows users to check weather conditions in different cities using the OpenWeatherMap API. The app provides real-time data on temperature, humidity, and other weather details, offering a user-friendly interface for easy city searches and weather updates.',
-    techStack: ['Node JS', 'HTML', 'CSS'],
-    imgSrc: 'weather.png',
-    link: 'http://anandpweatherapp.onrender.com/',
-    githubLink: 'https://github.com/anandp2002/weather_app',
-  },
 ];
 
 import {
@@ -165,14 +155,33 @@ export const EDUCATION = [
 export const EXPERIENCE = [
   {
     id: 1,
-    role: 'Junior Programmer',
-    company: 'Thoughtplex India Private Limited',
-    duration: 'Apr 2025 - Present',
+    role: 'Developer',
+    company: 'Thoughtplex Private Limited',
+    location: 'Bengaluru, Karnataka, India · Remote',
+    type: 'Full-time',
+    startMonth: 'Apr 2026',
+    endMonth: null,
     points: [
-      'Developing and maintaining a full-stack application built with Node JS, React JS, Tailwind CSS, and Firebase — crafting responsive front-end interfaces and scalable backend services.',
-      'Built real-time video calling with WebRTC, designed RESTful APIs, and automated backend workflows using Node JS cron jobs.',
-      'Integrated Stripe and GoCardless for end-to-end subscription management and payment processing.',
-      'Handled multi-environment backend deployments with systemd, HAProxy, TLS certificates, and Linux server administration.',
+      'Built and deployed an AI performance analysis pipeline integrating React, Node JS, FastAPI, vLLM, and GPU based inference with GPT OSS, Qwen, GLM, and other LLM models, implementing asynchronous processing, job tracking, and token-level response streaming over Server-Sent Events (SSE) for low-latency, incremental AI responses.',
+      'Implemented end-to-end payment and billing architecture, covering subscriptions, plans, billing cycles, payment line items, refunds, attendance-based billing, payment status tracking, and automated invoice generation.',
+      'Managed Dev, UAT, and Prod infrastructure, including Firebase Firestore, Firebase Storage, Firebase Hosting, Cloudflare DNS, Linux server deployments, systemd services, HAProxy, SSL/TLS, scheduled jobs, and automated redeployment/update workflows.',
+      'Mentored and coordinated interns and junior developers, providing technical guidance, task breakdown, debugging support, architectural guidance, and code reviews while contributing to system-wide technical decisions.',
+      'Integrated payment, tax, and accounting services including Stripe and Razorpay for payment processing, Stripe Tax for tax calculation, and Xero for invoice synchronization and accounting workflows, with webhook handling and automated retry/error handling.',
+    ],
+  },
+  {
+    id: 2,
+    role: 'Junior Programmer',
+    company: 'Thoughtplex Private Limited',
+    location: 'Bengaluru, Karnataka, India · Remote',
+    type: 'Full-time',
+    startMonth: 'Apr 2025',
+    endMonth: 'Mar 2026',
+    points: [
+      'Implemented comprehensive lesson management workflows covering lesson creation, recurring schedules, lesson occurrences, rescheduling, cancellations, attendance tracking, completion status, lesson history, and billing integration.',
+      'Improved application performance and responsiveness by optimizing Web API calls, parallelizing independent data requests, reducing redundant operations, and improving frontend rendering and data-fetching workflows.',
+      'Built and maintained RESTful Web APIs and backend integrations using Node JS/Express and FastAPI, connecting frontend applications with Firebase, payment services, accounting platforms, and internal AI services.',
+      'Designed and maintained CI/CD pipelines using GitHub Actions for automated build, testing, deployment, and environment specific releases across development, UAT, and production environments.',
     ],
   },
 ];

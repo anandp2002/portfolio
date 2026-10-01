@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
 const ContactMe = () => {
-  const EMAILJS_SERVICE_ID = 'service_fxlxjgh';
+  const EMAILJS_SERVICE_ID = 'service_favf68v';
   const EMAILJS_TEMPLATE_ID = 'template_n3xybyf';
   const EMAILJS_PUBLIC_KEY = 'wgL8-ExK_02SaZx7h';
 
@@ -23,7 +23,7 @@ const ContactMe = () => {
         () => {
           setIsSending(false);
           toast.success('Email sent successfully !');
-          form.current.reset(); // Clear the form after sending
+          form.current.reset();
         },
         (error) => {
           setIsSending(false);
@@ -33,75 +33,74 @@ const ContactMe = () => {
   };
 
   return (
-    <div
-      className="max-w-7xl mx-auto p-5 pt-24 flex items-stretch"
-      id="contact"
-    >
+    <div className="max-w-7xl mx-auto p-5 pt-24" id="contact">
       <Toaster />
 
-      {/* Left side: Form with animation */}
+      <h2 className="mb-10 text-center text-3xl font-medium lg:text-4xl">
+        CONTACT ME
+      </h2>
+
+      {/* Form with animation */}
       <motion.div
-        className="w-full lg:w-1/2 h-[593px]"
+        className="w-full"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8 }}
       >
         <form
-          className="bg-gray-100 py-4 px-6 rounded-lg lg:rounded-none lg:rounded-l-lg shadow-md max-w-2xl mx-auto space-y-6 h-full"
+          className="border border-purple-300/20 rounded-lg py-10 px-6 sm:px-10 space-y-6 bg-white/[0.03] backdrop-blur-sm"
           ref={form}
           onSubmit={sendEmail}
         >
-          <h2 className="mb-6 text-center sm:text-right text-3xl font-medium lg:text-4xl text-[#190417] ">
-            CONTACT ME
-          </h2>
-          <label className="block text-[#190417] font-semibold">Name</label>
-          <input
-            type="text"
-            name="name"
-            className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-950/20"
-            placeholder="Enter your name"
-            required
-          />
+          <div>
+            <label className="block text-purple-200/80 text-sm font-medium mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              className="w-full p-3 bg-white/5 text-stone-200 rounded-md border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:border-purple-500/50 placeholder-stone-500 transition duration-200"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
 
-          <label className="block text-[#190417] font-semibold">Email</label>
-          <input
-            type="email"
-            name="email"
-            className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-950/20"
-            placeholder="Enter your email"
-            required
-          />
+          <div>
+            <label className="block text-purple-200/80 text-sm font-medium mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="w-full p-3 bg-white/5 text-stone-200 rounded-md border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:border-purple-500/50 placeholder-stone-500 transition duration-200"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
 
-          <label className="block text-[#190417] font-semibold">Message</label>
-          <textarea
-            name="message"
-            className="w-full p-3 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-950/20 h-32"
-            placeholder="Type your message"
-            required
-          />
+          <div>
+            <label className="block text-purple-200/80 text-sm font-medium mb-2">
+              Message
+            </label>
+            <textarea
+              name="message"
+              className="w-full p-3 bg-white/5 text-stone-200 rounded-md border border-purple-300/20 focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:border-purple-500/50 placeholder-stone-500 transition duration-200 h-36 resize-none"
+              placeholder="Type your message"
+              required
+            />
+          </div>
 
-          <button
-            type="submit"
-            className="w-[100px] p-3 bg-[#3f1e3c] text-white font-semibold rounded-md hover:bg-[#2d152a] transition ease-in-out duration-200 cursor-pointer"
-          >
-            {isSending ? 'Sending...' : 'Send'}
-          </button>
+          <div className="flex justify-start">
+            <button
+              type="submit"
+              disabled={isSending}
+              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-md hover:from-purple-500 hover:to-violet-500 transition-all duration-200 cursor-pointer shadow-lg shadow-purple-900/40 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {isSending ? 'Sending...' : 'Send Message'}
+            </button>
+          </div>
         </form>
-      </motion.div>
-
-      {/* Right side: Image with animation */}
-      <motion.div
-        className="w-full lg:w-1/2 h-[593px] hidden lg:block"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.8 }}
-      >
-        <img
-          src="contactme.jpg"
-          className="h-full w-full object-cover rounded-r-lg"
-        />
       </motion.div>
     </div>
   );

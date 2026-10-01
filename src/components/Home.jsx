@@ -20,15 +20,16 @@ const Home = () => {
         >
           <h1 className="text-4xl sm:text-6xl font-extrabold">ANAND P</h1>
           <h2 className="text-2xl sm:text-3xl font-semibold text-violet-200 pt-2">
-            Full-stack Web Developer
+            Software Engineer
           </h2>
           <p className="mt-4 text-xl text-justify font-extralight max-w-5xl">
-            A 2024 B.Tech CSE graduate with a strong foundation in frontend
-            technologies, backend frameworks, and responsive design. As a
-            passionate MERN stack developer, I focus on creating efficient,
-            user-friendly applications with an emphasis on seamless performance,
-            consistently approaching the user experience from a mobile-first
-            perspective.
+            I'm a developer at Thoughtplex, where I build real-world products from idea to production,
+            covering development, system design, and deployment. I work with React, Node JS, Express,
+            FastAPI, Firebase, and AI technologies, and I enjoy designing scalable architectures,
+            integrating services, and setting up CI/CD pipelines that make releases smooth and reliable.
+            I also contribute to technical planning and mentor interns, guiding them through tasks, good
+            development practices, and tough technical challenges. I'm always learning and looking for
+            new problems worth solving.
           </p>
           <motion.div
             className="flex items-center pt-5 space-x-4"
