@@ -1,3 +1,4 @@
+// Constants for the portfolio website
 export const RESUME_DRIVE_LINK =
   'https://drive.google.com/file/d/1pMbrhOFg1mFxmp06bppqIMTmTAgwh6mG/view?usp=sharing';
 
