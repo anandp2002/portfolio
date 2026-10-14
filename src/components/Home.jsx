@@ -23,13 +23,7 @@ const Home = () => {
             Software Engineer
           </h2>
           <p className="mt-4 text-xl text-justify font-extralight max-w-5xl">
-            I'm a developer at Thoughtplex, where I build real-world products from idea to production,
-            covering development, system design, and deployment. I work with React, Node JS, Express,
-            FastAPI, Firebase, and AI technologies, and I enjoy designing scalable architectures,
-            integrating services, and setting up CI/CD pipelines that make releases smooth and reliable.
-            I also contribute to technical planning and mentor interns, guiding them through tasks, good
-            development practices, and tough technical challenges. I'm always learning and looking for
-            new problems worth solving.
+           I’m a Developer at Thoughtplex Pvt. Ltd., where I work on building and deploying real-world software products from development to production. My experience includes full-stack development using React.js, Node.js, Express.js, and FastAPI, along with AI integration, system design, and API development. I also manage Dev, UAT, and Production deployments, maintain CI/CD pipelines, and work with cloud infrastructure and third-party integrations. In addition, I contribute to technical planning and mentor junior developers and interns through task breakdown, debugging, and code reviews. I focus on solving complex technical challenges, designing scalable and efficient solutions, and continuously improving my skills to build reliable, high-quality software.
           </p>
           <motion.div
             className="flex items-center pt-5 space-x-4"
